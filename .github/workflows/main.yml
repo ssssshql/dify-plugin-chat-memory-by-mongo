@@ -32,9 +32,9 @@ jobs:
           wget https://github.com/langgenius/dify-plugin-daemon/releases/download/0.0.8/dify-plugin-linux-amd64
           mv dify-plugin-linux-amd64 dify
           chmod 777 dify
-          ./dify plugin package ./dify-plugin-chat-memory-by-Mongo
+          ./dify plugin package ./dify-plugin-chat-memory-by-mongo
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: dify-plugin-chat-memory-by-Mongo.difypkg  # Artifact 名称
-          path: /home/runner/work/dify-plugin-chat-memory-by-Mongo/dify-plugin-chat-memory-by-Mongo.difypkg  
+          name: chat-memory-by-mongo.difypkg  # Artifact 名称
+          path: /home/runner/work/dify-plugin-chat-memory-by-mongo/dify-plugin-chat-memory-by-mongo.difypkg  
