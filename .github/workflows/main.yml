@@ -1,0 +1,40 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      # 必须首先检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 配置 Python 环境（推荐方式）
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13.2"
+
+      - name: Install dependencies
+        run: |
+          # 自动定位到仓库根目录，无需 cd
+          ls ./
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "⚠️ requirements.txt not found!"
+            exit 1
+          fi
+      - name: getTool
+        run: |
+          cd ..
+          wget https://github.com/langgenius/dify-plugin-daemon/releases/download/0.0.8/dify-plugin-linux-amd64
+          mv dify-plugin-linux-amd64 dify
+          chmod 777 dify
+          ./dify plugin package ./dify-plugin-chat-memory-by-Mongo
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dify-plugin-chat-memory-by-Mongo.difypkg  # Artifact 名称
+          path: /home/runner/work/dify-plugin-chat-memory-by-Mongo/dify-plugin-chat-memory-by-Mongo.difypkg  

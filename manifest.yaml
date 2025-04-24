@@ -1,0 +1,37 @@
+version: 0.0.2
+type: plugin
+author: ssssshql
+name: chat_menmory_by_Mongo
+label:
+  en_US: chat_menmory_by_Mongo
+  ja_JP: chat_menmory_by_Mongo
+  zh_Hans: chat_menmory_by_Mongo
+  pt_BR: chat_menmory_by_Mongo
+description:
+  en_US: 通过Mongodb,存储对话
+  ja_JP: 通过Mongodb,存储对话
+  zh_Hans: 通过Mongodb,存储对话
+  pt_BR: 通过Mongodb,存储对话
+icon: memory_slot.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    endpoint:
+      enabled: true
+plugins:
+  tools:
+    - provider/chat_memory_by_mongo.yaml
+meta:
+  version: 0.0.2
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-04-18T13:00:34.3093058+08:00
+privacy: PRIVACY.md
+verified: false
