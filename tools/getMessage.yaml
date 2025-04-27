@@ -42,7 +42,7 @@ parameters:
     form: llm
 
   - name: max_count
-    type: integer
+    type: number
     required: false
     default: 50
     label:

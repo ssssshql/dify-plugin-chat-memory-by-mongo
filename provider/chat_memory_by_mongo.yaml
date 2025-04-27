@@ -29,7 +29,7 @@ credentials_for_provider:
       pt_BR: URI completo de conexão MongoDB com porta
 
   database_port:
-    type: number-input  # 更合适的输入类型
+    type: text-input  # 更合适的输入类型
     required: true
     label:
       en_US: MongoDB Port
@@ -57,7 +57,7 @@ credentials_for_provider:
       pt_BR: Nome de usuário opcional
 
   database_password:
-    type: password-input  # 更安全的输入类型
+    type: secret-input  # 更安全的输入类型
     required: false
     label:
       en_US: Database Password

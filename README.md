@@ -1,4 +1,4 @@
-## chat_menmory_by_Mongo
+## chat_memory_by_mongo
 
 **Author:** ssssshql
 **Version:** 0.0.1
@@ -74,4 +74,4 @@ You need a MongoDB
 
 
 ### Github
-[https://github.com/ssssshql/dify-plugin-chat-memory-by-Mongo](https://github.com/ssssshql/dify-plugin-chat-memory-by-mongo)
+[https://github.com/ssssshql/dify-plugin-chat-memory-by-mongo](https://github.com/ssssshql/dify-plugin-chat-memory-by-mongo)
