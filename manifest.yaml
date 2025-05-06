@@ -1,4 +1,4 @@
-version: 0.0.1
+version: 0.0.2
 type: plugin
 author: ssssshql
 name: chat_memory_by_mongo
@@ -22,7 +22,7 @@ plugins:
   tools:
     - provider/chat_memory_by_mongo.yaml
 meta:
-  version: 0.0.1
+  version: 0.0.2
   arch:
     - amd64
     - arm64

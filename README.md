@@ -1,7 +1,7 @@
 ## chat_memory_by_mongo
 
 **Author:** ssssshql
-**Version:** 0.0.1
+**Version:** 0.0.2
 **Type:** tool
 
 ### Description
