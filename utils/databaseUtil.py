@@ -7,6 +7,7 @@ def get_mongo_client(db_metadata: Dict[str, Any]) -> MongoClient:
     Create a MongoDB client instance.
     """
     try:
+        print(f"Connecting to MongoDB at {db_metadata.get('host')}:{db_metadata.get('port')}")
         client = MongoClient(host=db_metadata.get("host"), port=db_metadata.get("port"), username=db_metadata.get("username"), password=db_metadata.get("password"))
         return client
     except Exception as e:
@@ -61,6 +62,7 @@ def get_conversation_messages(conv_id: str, user_id: str, db_metadata: Dict[str,
                 .sort("createdAt", -1) \
                 .limit(limit)
     # 返回格式化后的消息列表
+    print("limit"+str(limit));
     return [{
         "role": msg["role"],
         "content": msg["content"],

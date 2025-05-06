@@ -18,7 +18,7 @@ class PutMessage(Tool):
             tool_parameters["conversation_id"],
             tool_parameters["user_id"],
             db_metadata,
-            tool_parameters.get("limit", 50)
+            tool_parameters.get("max_count")
         )
         yield self.create_text_message(json.dumps(messages, ensure_ascii=False))
         yield self.create_json_message(

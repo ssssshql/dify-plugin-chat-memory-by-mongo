@@ -20,13 +20,13 @@ credentials_for_provider:
       zh_Hans: MongoDB数据库地址
       pt_BR: Endereço do Host MongoDB
     placeholder:
-      en_US: Enter MongoDB URI (e.g. mongodb://localhost:27017)
-      zh_Hans: 请输入MongoDB数据库地址(例如 mongodb://localhost:27017)
-      pt_BR: Insira o URI do MongoDB (ex： mongodb://localhost:27017)
+      en_US: Enter MongoDB URI (e.g. 127.0.0.1)
+      zh_Hans: 请输入MongoDB数据库地址(例如 127.0.0.1)
+      pt_BR: Insira o URI do MongoDB (ex： 127.0.0.1)
     help:
-      en_US: Full MongoDB connection URI with port
-      zh_Hans: 包含端口号的完整MongoDB连接地址
-      pt_BR: URI completo de conexão MongoDB com porta
+      en_US: MongoDB connection URI
+      zh_Hans: MongoDB连接地址
+      pt_BR: URI completo de conexão MongoDB com
 
   database_port:
     type: text-input  # 更合适的输入类型
